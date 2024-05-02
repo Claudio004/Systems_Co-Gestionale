@@ -1,0 +1,70 @@
+#intAnnoCorr{
+    border: 0.2vw solid #000;
+    width: 33.854166666666666666666666666667%;
+    height: 30vw;
+    margin-left: 33%;
+    border-radius: 2vw;
+    margin-top: -30.8%;
+    background-color: #aaa;
+    text-align: center;
+}
+
+#ian{
+    color: #000;
+    font-size: 120%;
+}
+
+table{
+    border: 0.15vw solid #000;
+    width: 90%;
+    margin-left: 5%;
+    border-collapse: collapse;
+    height: 85%;
+    margin-top: 0.5%;
+}
+
+th{
+    border: 0.05vw solid #000;
+    width: 45%;
+}
+
+#intTot{
+    color: #000;
+    font-size: 120%;
+    margin-left: -5%;
+}
+
+#cTot{
+    color: #000;
+    font-size: 120%;
+    margin-top: 20%;
+    margin-left: -25%;
+}
+
+#rdiv{
+    border: 0.2vw solid #000;
+    width: 31.1%;
+    height: 30vw;
+    margin-left: 69%;
+    border-radius: 2vw;
+    margin-top: -30.55%;
+    background-color: #aaa;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+footer{
+    border: 0.2vw solid #000;
+    height: 9.265vw;
+    width: 99.72vw;
+    margin-top: 2.855%;
+    margin-left: -0.45%;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    display: flex;
+    background-color: #aaa;
+    color: #000;
+}

@@ -1,0 +1,6 @@
+<Route path="/GestioneUtenti" element={<Utenti />} /> <---
+<Route path="/AggiungiFornitore" element={<AggiungiFornitore />} /> <---
+<Route path="/AggiungiComponente" element={<AggiungiComponente />} /> <---
+<Route path="/AggiungiCliente" element={<AggiungiCliente />} /> <---
+<Route path="/AggiungiIntervento" element={<AggiungiIntervento />} /> <---
+<Route path="/AggiungiUtente" element={<AggiungiUtente />} /> <---

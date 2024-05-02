@@ -1,0 +1,33 @@
+#list{
+    border: 0.2vw solid #000;
+    width: 66.145833333333333333333333333333%;
+    height: 29.9007vw;
+    margin-left: 33%;
+    border-radius: 2vw;
+    margin-top: -30.66734409332275568260685%;
+    background-color: #aaa;
+    text-align: center;
+    justify-self: flex-end;
+}
+
+#inCliente{
+    margin-top: 1%;
+    margin-left: -46%;
+    text-align: center;
+    border-radius: 1vw;
+    height: 6%;
+    width: 50%;
+}
+
+footer{
+    border: 0.2vw solid #000;
+    height: 10rem;
+    width: 119.66rem;
+    margin-top: 4rem;
+    margin-left: -0.55rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    background-color: #aaa;
+    color: #000;
+}

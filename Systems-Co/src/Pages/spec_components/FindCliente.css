@@ -1,0 +1,13 @@
+#findCliente{
+    display: flex;
+    margin-top: -3%;
+    height: 6%;
+    width: 20%;
+    background-color: #fff;
+    border: 0.2vw solid #000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3vw;
+    margin-left: 53%;
+}

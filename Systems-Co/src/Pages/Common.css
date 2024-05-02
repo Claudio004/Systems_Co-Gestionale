@@ -1,0 +1,37 @@
+#sideBar{
+    border: 0.2vw solid #000;
+    width: 33.854166666666666666666666666667%;
+    height: 30vw;
+    margin-left: -3%;
+    border-radius: 2vw;
+    margin-top: 5%;
+    background-color: #aaa;
+}
+  
+nav{
+    margin-left: 20%;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 20%;
+}
+
+#links{
+    display: flex;
+    margin-top: 10%;
+    height: 20%;
+    width: 76.923076923076923076923076923077%;
+    background-color: #fff;
+    border: 0.2vw solid #000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3vw;
+}
+
+#link{
+    font-size: 1vw;
+    color: #000;
+}

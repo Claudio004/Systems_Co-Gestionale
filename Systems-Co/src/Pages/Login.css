@@ -1,0 +1,19 @@
+#loginDiv{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 650px;
+    height: 650px;
+    border: 2px solid #000;
+    border-radius: 40px;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color: #ACACAC;
+}
+
+input{
+    width: 600px;
+    height: 70px;
+    border: 2px solid #000;
+    margin-top: 8%;
+}
