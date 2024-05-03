@@ -10,12 +10,6 @@ if ($conn->connect_error) {
 // Retrieve login data sent from React
 $data = json_decode(file_get_contents('php://input'), true);
 
-// Debugging retreive data  ==> ?\Volume:\xampp\apache\logs\error.log
-error_log("Received data: " . print_r($data, true));
-if ($data === null) {
-    die("Error decoding JSON data");
-}
-
 $matricola = $data['matricola'];
 $password = $data['password'];
 
@@ -36,12 +30,6 @@ if ($result->num_rows > 0) {
 } else {
     // Authentication failed
     $response = array('success' => false, 'message' => 'Invalid username or password');
-}
-
-// Debugging SQL queries ==> ?\Volume:\xampp\apache\logs\error.log
-error_log("Executing query: " . $query);
-if (!$result) {
-    die("Error executing query: " . $conn->error);
 }
 
 // Close prepared statement

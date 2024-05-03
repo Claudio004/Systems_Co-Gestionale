@@ -18,20 +18,13 @@ $result = $stmt->get_result();
 
 // Check if there is a matching name
 if ($result->num_rows > 0) {
-    // Authentication successful
+    // Successfully retrieved
     while($row = mysqli_fetch_array($result)){
-        $response[] = array('id' => $row["Id"], 'nome' => $row["Nome"], 'city' => $row["Città"], 'indirizzo' => $row["Via"], 'CAP' => $row["CAP"], 
-        'Telefono' => $row["Telefono"], 'Email'  => $row["email"]);
+        $response[] = array('id' => $row["Id"], 'nome' => $row["Nome"], 'city' => $row["Città"], 'indirizzo' => $row["Via"], 'Cap' => $row["CAP"], 'Telefono' => $row["Telefono"], 'Email'  => $row["email"]);
     }
 } else {
-    // Authentication failed
+    // Failed retrieve operation
     $response = array('Error' => "No entry found for this name");
-}
-
-// Debugging SQL queries ==> ?\Volume:\xampp\apache\logs\error.log
-error_log("Executing query: " . $query);
-if (!$result) {
-    die("Error executing query: " . $conn->error);
 }
 
 // Close prepared statement

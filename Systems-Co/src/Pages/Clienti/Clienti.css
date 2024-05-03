@@ -10,6 +10,15 @@
     justify-self: flex-end;
 }
 
+#entry{
+    width: 95%;
+    height: 85%;
+    border: 0.2vw solid #000;
+    border-radius: 0.8vw;
+    margin-left: 2.5%;
+    text-align: start;
+}
+
 #inCliente{
     margin-top: 1%;
     margin-left: -46%;
@@ -17,6 +26,10 @@
     border-radius: 1vw;
     height: 6%;
     width: 50%;
+}
+
+p{
+    margin-left: 1%;
 }
 
 footer{

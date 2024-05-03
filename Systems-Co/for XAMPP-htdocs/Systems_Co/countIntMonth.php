@@ -1,14 +1,11 @@
 <?php
-// Create connection
 $conn = mysqli_connect("localhost", "root", "", "db_systems");
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query used to retreive the assisting operations during the current year
-$query = "SELECT COUNT(i.Id) MonthTotal, MONTH(i.dataIntervento) AS Month from interventi as i where YEAR(i.DataIntervento) = YEAR(CURDATE()) GROUP BY MONTH(i.DataIntervento)";
+$query = "select COUNT(i.Id) MonthTotal, MONTH(i.dataIntervento) AS Month from interventi as i where YEAR(i.DataIntervento) = YEAR(CURDATE()) GROUP BY MONTH(i.DataIntervento)";
 $result = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($result) > 0) {
@@ -58,12 +55,5 @@ if (mysqli_num_rows($result) > 0) {
     echo 0;
 }
 
-// Debugging SQL queries ==> ?\Volume:\xampp\apache\logs\error.log
-error_log("Executing query: " . $query);
-if (!$result) {
-    die("Error executing query: " . $conn->error);
-}
-
-// Close connection
 $conn->close();
 ?>

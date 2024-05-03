@@ -7,14 +7,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve login data sent from React
-$data = file_get_contents('php://input');
-
-$cliente = $data;
-
 // Prepare SQL statement
-$stmt = $conn->prepare("SELECT * FROM committenti WHERE nome = ?");
-$stmt->bind_param("s", $cliente);
+$stmt = $conn->prepare("SELECT i.Id, c.Nome, i.IdCommittente, i.Matricola, i.Tipologia, i.Costo, i.DataIntervento FROM interventi as i JOIN committenti as c ON i.IdCommittente = c.Id");
 
 // Execute SQL statement
 $stmt->execute();
@@ -24,12 +18,12 @@ $result = $stmt->get_result();
 
 // Check if there is a matching name
 if ($result->num_rows > 0) {
-    // Authentication successful
+    // Successfully retrieved
     while($row = mysqli_fetch_array($result)){
-        $response[] = array('id' => $row["Id"], 'nome' => $row["Nome"], 'city' => $row["Città"], 'indirizzo' => $row["Via"], 'CAP' => $row["CAP"], 'Telefono' => $row["Telefono"], 'Email'  => $row["email"]);
+        $response[] = array('id' => $row["Id"], 'nome' => $row["Nome"], 'idComm' => $row["IdCommittente"],'matricola' => $row["Matricola"], 'tipologia' => $row["Tipologia"], 'costo' => $row["Costo"], 'dataInt' => $row["DataIntervento"]);
     }
 } else {
-    // Authentication failed
+    // Failed retrieve operation
     $response = array('Error' => "No entry found for this name");
 }
 
